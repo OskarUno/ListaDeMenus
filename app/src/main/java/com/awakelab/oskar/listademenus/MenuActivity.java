@@ -20,7 +20,6 @@ public class MenuActivity extends AppCompatActivity {
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initList();
-
     }
     private void initList() {
         ArrayList listadoMenu = new ArrayList();
@@ -39,7 +38,6 @@ public class MenuActivity extends AppCompatActivity {
         listadoMenu.add("Sopa juliana");
         listadoMenu.add("Corvina al ajillo");
         listadoMenu.add("Leche, pan con aceite y fruta");
-
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listadoMenu);
 
