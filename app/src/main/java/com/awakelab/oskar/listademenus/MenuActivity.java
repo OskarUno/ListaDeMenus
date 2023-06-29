@@ -1,19 +1,18 @@
 package com.awakelab.oskar.listademenus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 
-import com.awakelab.oskar.listademenus.databinding.ActivityMainBinding;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.awakelab.oskar.listademenus.databinding.ActivityMenuBinding;
 
 import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity {
     private ActivityMenuBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         initList();
     }
+
     private void initList() {
         ArrayList listadoMenu = new ArrayList();
         listadoMenu.add("Puré de calabacín");
@@ -45,7 +45,9 @@ public class MenuActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbar);
         binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-                public void onClick(View v) { onBackPressed(); }
-            });
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 }
