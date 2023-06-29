@@ -1,15 +1,11 @@
 package com.awakelab.oskar.listademenus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.awakelab.oskar.listademenus.databinding.ActivityMainBinding;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -19,12 +15,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btnListaMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentListadoMenu = new Intent(MainActivity.this, MenuActivity.class);
-                startActivity(intentListadoMenu);
-            }
+        binding.btnListaMenu.setOnClickListener(v -> {
+            Intent intentListadoMenu = new Intent(MainActivity.this, MenuActivity.class);
+            startActivity(intentListadoMenu);
         });
     }
 

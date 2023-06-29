@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ListaDeMenus</string>
+    <string name="tienes_hambre">¿ Tienes Hambre?</string>
 </resources>

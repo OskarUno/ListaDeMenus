@@ -4,21 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img_comida2"
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/by_Oskar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#4B1C1B1B"
+        android:text="By OskarUno"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/btnListaMenu"
-        android:layout_width="417dp"
-        android:layout_height="103dp"
-        android:backgroundTint="#C4FF0404"
-        android:text="¿ Tienes Hambre? "
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#4BFF0404"
+        android:text="@string/tienes_hambre"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:cornerRadius="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218"
         app:strokeColor="#A4DC7474"
         app:strokeWidth="2dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
