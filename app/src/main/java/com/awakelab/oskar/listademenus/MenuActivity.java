@@ -2,7 +2,9 @@ package com.awakelab.oskar.listademenus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 import com.awakelab.oskar.listademenus.databinding.ActivityMainBinding;
@@ -42,6 +44,10 @@ public class MenuActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listadoMenu);
 
         binding.listadoMenu.setAdapter(adapter);
+        setSupportActionBar(binding.toolbar);
+        binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+                public void onClick(View v) { onBackPressed(); }
+            });
     }
-
 }
